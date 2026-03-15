@@ -31,13 +31,13 @@
 
 ```bash
 cd ~/.openclaw/workspace/skills
-git clone https://github.com/anjun/openclaw-news-aggregator.git news-aggregator
+git clone https://github.com/anjun/openclaw-news-aggregator.git openclaw-news-aggregator
 ```
 
 ### 更新技能
 
 ```bash
-cd ~/.openclaw/workspace/skills/news-aggregator
+cd ~/.openclaw/workspace/skills/openclaw-news-aggregator
 git pull origin main
 ```
 
@@ -46,7 +46,7 @@ git pull origin main
 ### 基本用法
 
 ```bash
-cd ~/.openclaw/workspace/skills/news-aggregator
+cd ~/.openclaw/workspace/skills/openclaw-news-aggregator
 
 # 获取财经新闻（默认）
 node scripts/aggregate_news.js
@@ -125,7 +125,7 @@ openclaw plugins enable feishu
 ## 📁 项目结构
 
 ```
-news-aggregator/
+openclaw-news-aggregator/
 ├── README.md                # 使用说明
 ├── SKILL.md                 # 技能描述
 ├── _meta.json               # 元数据
