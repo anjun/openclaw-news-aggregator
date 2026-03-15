@@ -1,14 +1,14 @@
 ---
 name: news-aggregator
 version: 1.0.0
-description: 新闻聚合器（基于 TrendRadar 改造）- 聚合财经、科技、热搜等新闻，自动总结要点并推送飞书文档
+description: 新闻聚合器（基于 TrendRadar + ClawHub 改造）- 聚合财经、科技、热搜等新闻，自动总结要点并推送飞书文档
 license: MIT
 metadata: {"openclaw":{"emoji":"📰","requires":{"bins":["node"],"env":["TAVILY_API_KEY"]},"primaryEnv":"TAVILY_API_KEY"}}
 ---
 
 # News Aggregator 📰
 
-基于 [TrendRadar](https://github.com/sansan0/TrendRadar) (48.9k stars) 改造的新闻聚合技能。
+基于 [TrendRadar](https://github.com/sansan0/TrendRadar) (48.9k stars) 和 ClawHub `news-aggregator` 改造的新闻聚合技能。
 
 ## 功能
 
@@ -59,12 +59,17 @@ node scripts/aggregate_news.js "finance tech_cn"
 
 ## 改造说明
 
-**原始项目**: TrendRadar - AI 舆情监控与热点聚合工具  
+**原始项目**:
+1. TrendRadar - AI 舆情监控与热点聚合工具 (48.9k stars)
+2. ClawHub news-aggregator - 基础新闻聚合技能
+
 **改造内容**:
+- 整合两个项目的优点
 - 适配 OpenClaw 技能架构
 - 使用 Tavily Search 获取新闻
 - 使用 Jina Reader 提取内容
 - 飞书文档自动推送
+- 本地文件自动清理
 
 ---
 

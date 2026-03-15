@@ -1,16 +1,21 @@
 # 📰 OpenClaw News Aggregator
 
-基于 [TrendRadar](https://github.com/sansan0/TrendRadar) (48.9k stars) 项目改造的 OpenClaw 新闻聚合技能。
+基于 [TrendRadar](https://github.com/sansan0/TrendRadar) (48.9k stars) 和 ClawHub `news-aggregator` 技能改造的 OpenClaw 新闻聚合技能。
 
 ## 🔧 改造说明
 
-**原始项目**: TrendRadar - AI 驱动的舆情监控与热点聚合工具  
+**原始项目**:
+1. **TrendRadar** - AI 驱动的舆情监控与热点聚合工具（48.9k stars）
+2. **ClawHub news-aggregator** - 基础新闻聚合技能
+
 **改造内容**:
-- 适配 OpenClaw 技能架构
-- 使用 Tavily Search API 获取新闻
-- 使用 Jina Reader 提取网页内容
-- 自动创建飞书文档并发送链接
-- 本地文件自动清理（保留最近 10 个）
+- ✅ 整合两个项目的优点
+- ✅ 适配 OpenClaw 技能架构
+- ✅ 使用 Tavily Search API 获取新闻
+- ✅ 使用 Jina Reader 提取网页内容
+- ✅ 自动创建飞书文档并发送链接
+- ✅ 本地文件自动清理（保留最近 10 个）
+- ✅ 内容智能总结（要点 + 关键数据 + 时间）
 
 ## ✨ 功能特性
 
@@ -22,17 +27,18 @@
 
 ## 📦 安装
 
-### 方式一：从 GitHub 克隆
+### 从 GitHub 克隆（推荐）
 
 ```bash
 cd ~/.openclaw/workspace/skills
 git clone https://github.com/anjun/openclaw-news-aggregator.git news-aggregator
 ```
 
-### 方式二：从 ClawHub 安装
+### 更新技能
 
 ```bash
-clawhub install news-aggregator
+cd ~/.openclaw/workspace/skills/news-aggregator
+git pull origin main
 ```
 
 ## 🚀 使用
@@ -120,6 +126,7 @@ openclaw plugins enable feishu
 
 ```
 news-aggregator/
+├── README.md                # 使用说明
 ├── SKILL.md                 # 技能描述
 ├── _meta.json               # 元数据
 ├── run.sh                   # 运行脚本
@@ -127,7 +134,7 @@ news-aggregator/
 │   └── aggregate_news.js    # 主程序
 ├── output/                  # 输出目录（自动清理）
 │   └── news-*.md
-└── README.md                # 使用说明
+└── .gitignore
 ```
 
 ## 🔧 开发
@@ -153,7 +160,7 @@ const NEWS_SOURCES = {
 ## 📝 更新日志
 
 ### v1.0.0 (2026-03-15)
-- ✅ 基于 TrendRadar 改造完成
+- ✅ 基于 TrendRadar + ClawHub news-aggregator 改造完成
 - ✅ 支持 5 个新闻类别
 - ✅ 飞书文档自动创建
 - ✅ 本地文件自动清理
@@ -162,6 +169,7 @@ const NEWS_SOURCES = {
 ## 🙏 致谢
 
 - **TrendRadar** ([GitHub](https://github.com/sansan0/TrendRadar)) - 新闻源配置参考
+- **ClawHub news-aggregator** - 基础技能架构参考
 - **Tavily** - 搜索 API 支持
 - **Jina AI** - 网页内容提取
 
@@ -173,4 +181,5 @@ MIT License
 
 **作者**: 安俊  
 **项目**: OpenClaw News Aggregator  
-**基于**: TrendRadar (48.9k stars)
+**基于**: TrendRadar (48.9k stars) + ClawHub news-aggregator  
+**仓库**: https://github.com/anjun/openclaw-news-aggregator
