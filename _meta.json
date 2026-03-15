@@ -1,0 +1,8 @@
+{
+  "ownerId": "local",
+  "slug": "news-aggregator",
+  "version": "1.0.0",
+  "source": "github",
+  "repository": "https://github.com/anjun/openclaw-news-aggregator.git",
+  "installedAt": "2026-03-15T13:21:00+08:00"
+}
